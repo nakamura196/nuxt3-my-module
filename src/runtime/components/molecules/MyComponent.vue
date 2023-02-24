@@ -1,12 +1,10 @@
 <script lang="ts" setup>
 
-import { useFuse } from '#imports';
+import { useFuse, ref } from '#imports';
 
 const {search} = useFuse();
 
 const res = ref(search())
-
-
 
 </script>
 
