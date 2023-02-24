@@ -1,4 +1,21 @@
 export default defineNuxtConfig({
-  modules: ['../src/module'],
-  myModule: {}
-})
+  runtimeConfig: {
+    nakamuraTest: {
+      pairs: {
+        admin: "admin",
+      },
+    },
+    public: {
+      bbb: {
+        pairs: {
+          admin: "admin",
+        }
+      }
+    }
+  },
+  modules: ["../src/module"],
+  // MyModule: {},
+  build: {
+    transpile: ["vuetify"],
+  },
+});
