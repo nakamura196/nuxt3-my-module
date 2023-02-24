@@ -3,6 +3,8 @@ import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 import colors from "vuetify/lib/util/colors";
 
+import { defineNuxtPlugin } from '#imports'
+
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
 
 const primary = colors.blue.base;
