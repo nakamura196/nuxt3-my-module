@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 
+import { useFuse } from '#imports';
+
 const {search} = useFuse();
 
 const res = search()
