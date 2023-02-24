@@ -45,6 +45,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     // css
     // nuxt.options.css.push('font-awesome/css/font-awesome.css')
+    nuxt.options.css.push('vuetify/lib/styles/main.sass')
 
     // const resolver = createResolver(import.meta.url)
 
@@ -82,6 +83,46 @@ export default defineNuxtModule<ModuleOptions>({
       // filePath should be package name or resolved path
       // if the component is created locally, preferably in `runtime` dir
       filePath: resolve(runtimeDir, "components", "molecules", "MyComponent.vue"),
+      // '@vue/awesome-components' //
+    });
+
+    addComponent({
+      name: "LayoutsDefault", // name of the component to be used in vue templates
+      export: "default", // (optional) if the component is a default export
+      // export: 'MyAwesomeComponent', // (optional) if the component is a named (rather than default) export
+      // filePath should be package name or resolved path
+      // if the component is created locally, preferably in `runtime` dir
+      filePath: resolve(runtimeDir, "components", "layouts", "default.vue"),
+      // '@vue/awesome-components' //
+    });
+
+    addComponent({
+      name: "LayoutsHeader", // name of the component to be used in vue templates
+      export: "default", // (optional) if the component is a default export
+      // export: 'MyAwesomeComponent', // (optional) if the component is a named (rather than default) export
+      // filePath should be package name or resolved path
+      // if the component is created locally, preferably in `runtime` dir
+      filePath: resolve(runtimeDir, "components", "layouts", "header.vue"),
+      // '@vue/awesome-components' //
+    });
+
+    addComponent({
+      name: "LayoutsFooter", // name of the component to be used in vue templates
+      export: "default", // (optional) if the component is a default export
+      // export: 'MyAwesomeComponent', // (optional) if the component is a named (rather than default) export
+      // filePath should be package name or resolved path
+      // if the component is created locally, preferably in `runtime` dir
+      filePath: resolve(runtimeDir, "components", "layouts", "footer.vue"),
+      // '@vue/awesome-components' //
+    });
+
+    addComponent({
+      name: "MoleculesToTopBtn", // name of the component to be used in vue templates
+      export: "default", // (optional) if the component is a default export
+      // export: 'MyAwesomeComponent', // (optional) if the component is a named (rather than default) export
+      // filePath should be package name or resolved path
+      // if the component is created locally, preferably in `runtime` dir
+      filePath: resolve(runtimeDir, "components", "molecules", "ToTopBtn.vue"),
       // '@vue/awesome-components' //
     });
 

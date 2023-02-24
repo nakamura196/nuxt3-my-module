@@ -4,7 +4,9 @@ import { useFuse } from '#imports';
 
 const {search} = useFuse();
 
-const res = search()
+const res = ref(search())
+
+
 
 </script>
 
@@ -14,6 +16,7 @@ const res = search()
     <v-btn
       color="primary"
       flat
+      @click="res.total = 10"
     >
       あああ
     </v-btn>

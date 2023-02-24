@@ -1,49 +1,23 @@
-<script setup lang="ts">
-// import { useRuntimeConfig } from '#imports'
-// import {useComposable} from "#imports";
-const {foo2, foo3} = useMinimalArchive();
+<script lang="ts" setup>
+import { useHead, useRuntimeConfig } from "#imports";
 
-const main = () => {
-  foo2.value = "あいう"
-}
+const config = useRuntimeConfig();
 
+const siteName = config.public.title || "サイトの名前"; //
 
-const rc = useRuntimeConfig();
-// console.log(rc.bbb);
+useHead({
+  titleTemplate: (titleChunk) => {
+    return siteName !== titleChunk ? `${titleChunk} - ${siteName}` : siteName;
+  },
+});
 </script>
 
 <template>
-  <div>
-    Nuxt module playground!
-
-    <br>
-
-    {{ rc.siteName || "あああ" }}
-
-    <br>
-
-    {{ foo2 }}
-
-    <br>
-
-    {{ foo3 }}
-
-    <br>
-
-    <!-- <MyAwesomeComponent /> -->
-
-    <MyComponent />
-
-    <br>
-
-    <button @click="main()">
-      あああ
-    </button>
-
-    <br>
-
-    bbb
-  </div>
+  <NuxtLayout>
+    <NuxtLoadingIndicator
+      color="#E64A19"
+      :height="5"
+    />
+    <NuxtPage />
+  </NuxtLayout>
 </template>
-
-
